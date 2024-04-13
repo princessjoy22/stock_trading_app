@@ -3,7 +3,7 @@
         <h1>Stock Information</h1>
         <ul>
         <% @most_active_stocks.each do |stock| %>
-            <li><%= stock.symbol %>: <%= stock.company_name %></li>
+            <li><%= stock.symbol %>: <%= stock.company_name %> <%= number_to_currency(stock.latest_price) %></li>
         <% end %>
         </ul>
     <div>

@@ -13,10 +13,11 @@
 
   <body>
     <main class="flex">
-        <nav class="flex">
+        <nav class="flex justify-center">
             <div class="sticky top-0 w-64 h-screen p-4 bg-gray-600">
                 <div class="flex">
-                    <h1 class="hidden py-2 font-bold text-md text-gray-50 md:block">User</h1>
+                    <div><%= icon('fa-solid', 'user', class: "mr-2 h-24 w-24") %></div>
+                    <h1 class="hidden py-2 font-bold text-md text-gray-50 md:block"><%= current_user.email %></h1>
                 </div>
                 <ul class="flex flex-col text-gray-50">
                     <li>
@@ -30,12 +31,12 @@
                         <% end %>
                     </li>
                     <li>
-                        <%= link_to admin_path, class: "block px-4 py-2 hover:rounded hover:bg-gray-700" do %>
+                        <%= link_to user_path, class: "block px-4 py-2 hover:rounded hover:bg-gray-700" do %>
                             <%= icon('fa-solid', 'money-bill', class:'mr-2') %> <span class="hidden md:inline-block">Buy/Sell</span>
                         <% end %>
                     </li>
                     <li>
-                        <%= link_to admin_path, class: "block px-4 py-2 hover:rounded hover:bg-gray-700" do %>
+                        <%= link_to user_path, class: "block px-4 py-2 hover:rounded hover:bg-gray-700" do %>
                             <%= icon('fa-solid', 'credit-card', class:'mr-2') %> <span class="hidden md:inline-block">Transactions</span>
                         <% end %>
                     </li>
